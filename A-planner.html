@@ -1,0 +1,517 @@
+<html>
+
+    <head>
+    
+    
+        <title>Product Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <script src="https://use.fontawesome.com/031e3862f6.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+      
+        
+        <style>
+            
+            *{
+                
+                box-sizing: border-box;
+            }
+            
+            
+            
+            #flex-container{
+                display: flex;
+                
+               background-color: #4A4A4A;
+                flex-direction: row;
+                 padding: 10px;
+                border:0.5px solid #4A4A4A;
+                border-radius: 5px;
+                color:#212121;
+               font-family: 'Roboto', sans-serif;
+                font-weight: 900;
+                font-size: 16px;
+                
+                height: 100vh;
+               
+                
+            }
+            
+            #left{
+                
+                background-color: white;
+                flex:50%;
+              margin-right: 5px;
+                height:auto;
+               padding: 10px;
+                border: 1px solid black;
+                overflow: scroll;
+            }
+            
+            .date-picker{
+                
+                border:none;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 900;
+                font-size: 16px;
+                padding: 0;
+                margin: 0;
+                text-align: right;
+                
+               
+               
+               
+            }
+            .date-picker:focus{
+                
+                outline: none;
+                
+               
+                
+            }
+            
+            .date-picker:hover{
+                
+                cursor: pointer;
+            }
+            
+            [type="date"]::-webkit-inner-spin-button {
+                      display:none;
+                position: absolute;
+                    }
+                    [type="date"]::-webkit-calendar-picker-indicator {
+                    opacity:0;
+                        position: absolute;
+                        display: inline;
+                        width:100px;
+                        cursor: pointer;
+                        
+                       
+                    }
+
+             #right{
+                  margin-left: 5px;
+                background-color: white;
+                flex:50%;
+                 padding: 10px;
+                 height:auto;
+                 border: 1px solid black;
+                 overflow: scroll;
+            }
+            
+            
+            .topbar{
+                
+                 line-height: 30px;
+          
+                
+            }
+            
+            .top-link{
+                   color:#212121;
+                text-decoration: none;
+                padding: 2px;
+                float:right;
+                     
+            }
+            .title{
+                clear:both;
+                      border-bottom: 2px solid #212121;
+                padding-top: 20px;
+                padding-bottom: 3px;
+            }
+           
+            .text{
+                
+                width: 100%;
+                position: relative;
+               
+                
+            }
+            
+            .text-area{
+                
+                width:100%;
+                resize: none;
+                background-attachment: local;
+                background-image:
+                    linear-gradient(to right, white 10px, transparent 10px),
+                    linear-gradient(to left, white 10px, transparent 10px),
+                    repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+                line-height: 31px;
+                padding: 8px 25px;
+                padding-top: 1px;
+               border:none;
+                padding-bottom: 0;
+                margin-top:0;
+                margin: 0;
+                font-weight: 0; 
+                font-family: 'Roboto', sans-serif;
+                font-size: 16px;
+              
+             
+                
+            }
+            
+            .text-area:focus{
+                
+                outline:none;
+                 background-attachment: local;
+                 background-image:
+                    linear-gradient(to right, white 10px, transparent 10px),
+                    linear-gradient(to left, white 10px, transparent 10px),
+                    repeating-linear-gradient(white, white 30px,#3688D8 30px, #3688D8 31px, white 31px);
+            }
+            
+            
+         /*     .svg_circle{
+                    display: none;
+                    position: absolute; 
+                    left:97%; top:9;
+                    width:15px; 
+                    height:15px; 
+                    background-color: #4A4A4A; 
+                    border-radius: 50%;
+                 
+                 cursor: pointer;
+                }
+            
+        /*    input[type="checkbox"]{
+                display: none;
+                padding: 0px;
+                margin: 0px;
+                position: absolute;
+                top:9;
+                left:5;
+            }
+            */
+            
+            @media screen and (max-width:600px){
+                
+                #flex-container{
+                    
+                    flex-direction: column;
+                    height: auto;
+                    
+                }
+                
+                #left{
+                    
+                    overflow: visible;
+                    margin-bottom: 5px;
+                    margin-right: 0;
+                }
+                
+                 #right{
+                      margin-top: 5px;
+                    margin-left: 0;
+                     
+                    overflow: visible;
+                }
+                
+               
+                
+               
+                
+            }
+            
+          
+            
+            
+            
+           
+        </style>
+        
+    </head>
+
+
+    <body>
+        
+      
+        <div id="flex-container">
+        
+            <div id="left">
+            
+                <div id="topnav" class="topbar">
+                   
+                
+                    <input type="date" value="2020-09-16" class="date-picker" >
+                    
+                    
+                    <div style="background-color:#EAEAEA; display:inline-block;">
+                    <svg height="15" width="18" >
+                      <polygon points="3,8 12,4 12,12" style="fill:black;stroke:black;stroke-width:1" />
+                      Sorry, your browser does not support inline SVG.
+                    </svg> </div>
+                    
+                    
+                    <div style="background-color:#EAEAEA; display:inline-block;">
+                    <svg height="15" width="18" >
+                      <polygon points="13,8 3,4 3,12" style="fill:black;stroke:black;stroke-width:1" />
+                      Sorry, your browser does not support inline SVG.
+                    </svg> </div>
+                        
+                 
+                   
+                    <a href="#" class="top-link"><h6 style="padding: 0;margin: 0; font-weight: bolder;">beta</h6></a>
+                    <a href="#" class="top-link">A Planner</a>
+                    <a href="#" class="top-link"><img src="https://aplanner.app/assets/images/logo/aplanner-logo@2x.png" height="25" width="25"></a>
+                    <div style=" border: 1px solid #212121; clear:both;"></div>
+                        
+                
+                
+                </div>
+                
+                <div class="title">Today's Motivation</div>
+                
+                <div class="text"><textarea class="text-area"  rows="8" >Successful people appear to be travelling along one continual, successful road. What is not apparent is the perseverance it takes following each defeat to keep you on that road. No one I know of has ever experienced one success after another without defeats, failures, disappointments, and frustrations galore along the way. Learning to overcome those times of agony is what separates the winners from the losers.</textarea></div>
+                
+                  <div class="title">My Goals</div>
+                
+                  <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                
+                 <div class="title">Targets</div>
+                
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                
+                <div class="title">Achievements</div>
+                
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                
+                <div class="title">Notes</div>
+                
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                
+                
+            
+            
+            
+            
+            </div>
+            
+            
+             <div id="right">
+            
+                 <div class="topbar">
+                     
+                     <div style="float:left; padding: 2px;">No Plan ?</div>
+                     
+                     <div style="float:right; padding-bottom: 3px; ">
+                    <svg height="33" width="20" >
+                      <circle   cx="10" cy="7" r="2" fill="black" stroke-width="3" fill="red" />
+                       <circle  cx="10" cy="13" r="2" fill="black" stroke-width="3" fill="red" />
+                        <circle  cx="10" cy="19" r="2" fill="black" stroke-width="3" fill="red" />
+                      Sorry, your browser does not support inline SVG.  
+                    </svg> </div>
+                     
+                  <div style=" border: 1px solid #212121; clear:both;"></div>
+                 </div>
+                   <div class="title">Morning Kick-Off</div>
+                 
+                 <div class="outer_textarea">
+                 
+                  <div class="text" > <textarea class="text-area"  rows="1" ></textarea> </div>
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                    
+                 </div>
+                 
+                  <div class="title">9 am - 12 pm</div>
+                 
+                  <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                 
+                   <div class="title">12 pm - 3 pm</div>
+                 
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                 
+                   <div class="title">3 pm - 6 pm</div>
+                 
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+            
+                 
+                  <div class="title">Evening Challenges</div>
+                 
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                 
+                  <div class="title">Sign-Off Tasks</div>
+                 
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+                 <div class="text"><textarea class="text-area"  rows="1" ></textarea></div>
+            
+            
+            
+            
+            
+            </div>
+        
+                
+        
+        
+        
+        </div>
+        
+        
+        <script>
+           
+              //APPEND CIRCLE AND CHECKBOX
+             $("body").delegate("textarea","keypress",function(e){
+                 var count=0; var appends;
+                  
+                  console.log("i am typing");
+            
+                   if($(this).val().length ==1 ){
+                    console.log("enter");
+                 console.log( $(this).parent());
+                      // console.log($(this).val());
+                
+                //  console.log($(this).parent().attr("class"));
+                       
+                         $(this).parent(".text").prepend('  <input type="checkbox" class="check_box" style="padding:0px; margin: 0px; position: absolute;top:9;left:5;"> ');   
+                       
+                       
+                       
+                
+                $(this).parent(".text").append(' <div class="svg_circle" style=" display: none; position: absolute; left:97%; top:9; width:15px; height:15px;  background-color: #4A4A4A; border-radius: 50%;cursor: pointer;"><svg width="15" height="15"> <line x1="4" y1="4" x2="11" y2="10" style="stroke:rgb(255,255,255);stroke-width:1.5" /><line x1="11" y1="4" x2="4" y2="10" style="stroke:rgb(255,255,255);stroke-width:1.5" /> </svg></div> ');
+                  
+             
+                         $(this).children("input").show();
+                   
+                   }
+                  
+                  
+                  
+                  
+              /*   $(".outer_textarea").children(".text").each(function(index,elmnt){
+                     
+                     if($(elmnt).children("textarea").val() != ""){
+                         
+                         count++;
+                         console.log(count)
+                         
+                     }
+                     
+                     
+                 }) */
+                    var no_textarea =  $(".outer_textarea").find("textarea").length
+                  
+                   $(".outer_textarea").find("textarea").each(function(i,e){
+                   
+                  
+                     if($(e).val() != ""){
+                         
+                        
+                      count++;   
+                     }
+                    
+                     if(count == no_textarea){
+                         appends=true;
+                         console.log("count is:"+count)
+                         count =0;
+                          
+                           console.log("no oftexxtarea is:"+no_textarea)
+                         
+                        
+                         
+                         
+                     }
+                    
+                })
+                 
+                   $("body").delegate(".outer_textarea","mousedown",function(e){
+                             console.log(e);
+                             if(appends == true){
+                             console.log("body")
+                                  console.log(appends)
+                              $(".outer_textarea").append('<div class="text"><textarea class="text-area"  rows="1" ></textarea></div>');
+                             console.log( $(".outer_textarea").find("textarea"))
+                                 
+                             appends =false;
+                                  console.log(appends)
+                             
+                             }
+                             
+                             
+                             
+                         })
+                         
+                  
+                       })
+            
+            
+            
+            
+            //MOUSE ENTER
+        
+           $("body").delegate(".text","mouseenter",function(e){
+                
+                if( $(this).children("textarea").val() != ""){
+                
+                $(this).children(".svg_circle").show(); 
+                
+                
+                
+                }
+            })
+            
+            
+            
+            
+              //MOUSE LEAVE
+             $("body").delegate(".text","mouseleave",function(e){
+                
+                $(this).children(".svg_circle").hide();
+                
+                
+            })
+            
+            
+            
+            
+              //DELETE TEXT
+            
+           $("body").delegate(".text","click",function(e){
+                
+                console.log("close clicked")
+                if(e.target  instanceof SVGElement ){
+                    
+                    
+                    $(this).children(".text-area").remove();
+                    $(this).children(".svg_circle").remove();
+                     $(this).children(".check_box").remove();
+                    
+                    
+                     console.log($(this).children())
+                    
+                }
+            })
+            
+            
+            
+           
+             
+        
+        
+        
+        </script>
+        
+       
+        
+        
+        
+    
+    </body>
+
+
+</html>
